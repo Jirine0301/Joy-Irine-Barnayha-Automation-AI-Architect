@@ -27,13 +27,7 @@
 }
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"What services do you offer?","acceptedAnswer":{"@type":"Answer","text":"GoHighLevel CRM setup, Make.com automation, Zapier workflows, AI phone assistants, AI integration (voice agents, chatbots, digital twins), and landing pages/funnels."}},
-{"@type":"Question","name":"What tools/platforms do you work with?","acceptedAnswer":{"@type":"Answer","text":"GoHighLevel, Make.com, Zapier, Claude AI, Vapi.ai, ElevenLabs, ChatGPT, Zoho CRM, Airtable, and more."}},
-{"@type":"Question","name":"How does the process start?","acceptedAnswer":{"@type":"Answer","text":"Book a free call to discuss your business needs and how automation can run your business on autopilot."}},
-{"@type":"Question","name":"Do I need technical knowledge to work with you?","acceptedAnswer":{"@type":"Answer","text":"No, the full setup is handled end-to-end, from strategy to build."}},
-{"@type":"Question","name":"How much does it cost?","acceptedAnswer":{"@type":"Answer","text":"Pricing depends on project scope. Book a free call for a custom quote."}}
-]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What services do you offer?", "acceptedAnswer": {"@type": "Answer", "text": "GoHighLevel CRM setup, Make.com automation, Zapier workflows, AI phone assistants, AI integration (voice agents, chatbots, digital twins), and landing pages/funnels."}}, {"@type": "Question", "name": "What tools/platforms do you work with?", "acceptedAnswer": {"@type": "Answer", "text": "GoHighLevel, Make.com, Zapier, Claude AI, Vapi.ai, ElevenLabs, ChatGPT, Zoho CRM, Airtable, and more."}}, {"@type": "Question", "name": "How does the process start?", "acceptedAnswer": {"@type": "Answer", "text": "Book a free call to discuss your business needs and how automation can run your business on autopilot."}}, {"@type": "Question", "name": "Do I need technical knowledge to work with you?", "acceptedAnswer": {"@type": "Answer", "text": "No, the full setup is handled end-to-end, from strategy to build."}}, {"@type": "Question", "name": "How much does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "Pricing depends on project scope. Book a free call for a custom quote."}}, {"@type": "Question", "name": "What does a GoHighLevel expert do?", "acceptedAnswer": {"@type": "Answer", "text": "A GHL expert sets up the CRM so leads are captured, replied to, followed up and booked automatically, and builds the pipelines, funnels, calendars and workflows that run your sales process."}}, {"@type": "Question", "name": "Can Joy work in my existing GoHighLevel account?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Joy can set up a new GHL account or clean up and automate the one you already use."}}, {"@type": "Question", "name": "What is Make.com used for?", "acceptedAnswer": {"@type": "Answer", "text": "Make.com connects your apps and automates multi-step processes, so data moves and actions happen without anyone doing it by hand."}}, {"@type": "Question", "name": "Should I use Make.com or Zapier?", "acceptedAnswer": {"@type": "Answer", "text": "Make.com is better for complex flows with many branches and lower cost at high volume. Zapier is quicker for simple two or three step automations."}}, {"@type": "Question", "name": "What can Zapier automate?", "acceptedAnswer": {"@type": "Answer", "text": "Almost any task where something happens in one app and should cause an action in another, such as saving leads, sending emails, posting notifications or updating records."}}, {"@type": "Question", "name": "What is an AI phone assistant?", "acceptedAnswer": {"@type": "Answer", "text": "An AI voice agent that answers your business calls 24/7, answers common questions, qualifies the caller, books appointments on your calendar and sends the details to your CRM."}}, {"@type": "Question", "name": "Can an AI voice agent book appointments?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It checks your calendar, offers open times and books the slot the caller picks. Unknown or urgent questions go to a person."}}, {"@type": "Question", "name": "Will an AI assistant make things up?", "acceptedAnswer": {"@type": "Answer", "text": "Joy's AI assistants answer only from your business information and are set up to escalate to your team instead of guessing."}}, {"@type": "Question", "name": "Can you build a landing page connected to my CRM?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Joy builds landing pages and funnels in GoHighLevel or custom HTML, and every form and booking connects to your CRM so each lead gets an instant reply and follow-up."}}]}
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet"/>
 <style>
@@ -185,6 +179,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#0f0f0f;height:8
 .svc:hover .svc-ico-wrap{background:var(--mg);border-color:var(--mg);}
 .svc h3{font-size:16px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-.2px;position:relative;z-index:1;}
 .svc p{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.9;position:relative;z-index:1;}
+.svc-more{position:relative;z-index:1;margin-top:18px;background:none;border:0;padding:0;color:var(--mg2);font:inherit;font-size:12px;font-weight:700;letter-spacing:.06em;cursor:pointer;}
+.svc-more:hover{color:#fff;}
+.svc-detail{display:none;}
+.svc-modal{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,0.72);opacity:0;pointer-events:none;transition:opacity .45s ease;}
+.svc-modal.open{opacity:1;pointer-events:auto;}
+.svc-modal-box{position:relative;width:100%;max-width:640px;max-height:86vh;overflow-y:auto;background:var(--s1);border:1px solid rgba(139,0,75,0.45);border-radius:14px;padding:40px 36px;transform:translateY(14px);transition:transform .45s ease;}
+.svc-modal.open .svc-modal-box{transform:none;}
+.svc-modal-box h3{font-size:22px;font-weight:800;color:#fff;margin-bottom:6px;}
+.svc-modal-box h4{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--mg2);margin:24px 0 8px;}
+.svc-modal-box p,.svc-modal-box li{font-size:14px;color:rgba(255,255,255,0.72);line-height:1.85;}
+.svc-modal-box ol{padding-left:20px;}
+.svc-modal-box p+p{margin-top:10px;}
+.svc-modal-box a{color:#fff;text-decoration:underline;text-decoration-color:var(--mg2);}
+.svc-modal-x{position:absolute;top:14px;right:16px;background:none;border:0;color:rgba(255,255,255,0.6);font-size:26px;line-height:1;cursor:pointer;}
+.svc-modal-x:hover{color:#fff;}
+@media(max-width:600px){.svc-modal-box{padding:32px 20px;max-height:90vh;}}
 .svc:hover p{color:rgba(255,255,255,0.8);}
 
 /* VIDEO CARD */
@@ -1174,6 +1184,34 @@ footer{background:var(--bg);padding:32px 64px;display:flex;align-items:center;ju
       <div class="svc-ico-wrap">⚙️</div>
       <h3>GHL Setup & Management</h3>
       <p>Full GoHighLevel CRM setup: pipelines, funnels, calendars, automations, sub-accounts, and everything in between.</p>
+      <button type="button" class="svc-more" data-svc="svc-d-ghl" aria-haspopup="dialog">See how it works &rarr;</button>
+      <article class="svc-detail" id="svc-d-ghl">
+        <h3>GHL Setup &amp; Management</h3>
+        <h4>The problem</h4>
+        <p>Leads come in from forms, calls, Facebook and email, and they end up in different places. Replies are slow, follow-ups get forgotten, and nobody can see which deals are close to closing.</p>
+        <h4>Who it is for</h4>
+        <p>Service businesses, agencies and coaches who get leads every week but lose some of them because replies, follow-ups and bookings are done by hand. Common examples: contractors, HVAC, med spas, real estate teams and marketing agencies managing client sub-accounts.</p>
+        <h4>What I build</h4>
+        <p>One GoHighLevel system where every inquiry lands in the same pipeline, gets an instant reply, is followed up automatically until it books, and moves through clear stages from new lead to paid. This can include pipelines and stages, lead capture forms and funnels, calendars with booking links, email and SMS workflows, tags and custom fields, reporting, and agency sub-account (snapshot) setup.</p>
+        <h4>How it works</h4>
+        <ol>
+          <li>A lead fills a form, calls or messages. GHL creates the contact and puts it in the pipeline.</li>
+          <li>An automatic reply goes out within minutes, with a link to book.</li>
+          <li>If there is no reply, follow-ups go out on a schedule and stop as soon as the lead answers.</li>
+          <li>Bookings land on the calendar and the deal moves to the next stage, so you always know where every lead is.</li>
+        </ol>
+        <h4>What changes for your business</h4>
+        <p>Every lead is answered fast, no follow-up depends on someone remembering, and your whole sales process is visible in one place. Your team spends less time on admin and more time on the leads that are ready to buy.</p>
+        <h4>Tools</h4>
+        <p>GoHighLevel (pipelines, funnels, calendars, workflows, sub-accounts), with n8n or Make.com when a step needs more logic.</p>
+        <h4>Sample project</h4>
+        <p><a href="https://construction.joyirinebarnayha.com/" target="_blank" rel="noopener">AI Sales System for Construction (live demo)</a>: a demo I built on GHL and n8n that answers every inquiry, books site visits and sends proposals, contracts and deposit invoices on its own. Try it with your own company name.</p>
+        <h4>FAQ</h4>
+        <p><strong>Can you work in my existing GHL account?</strong> Yes. I can set up a new account or clean up and automate the one you already use.</p>
+        <p><strong>Do I need to be technical?</strong> No. I build it, test it, and show you how to use it.</p>
+        <p><strong>What does a GoHighLevel expert do?</strong> A GHL expert sets up the CRM so leads are captured, replied to, followed up and booked automatically, and builds the pipelines, funnels, calendars and workflows that run your sales process.</p>
+        <p><strong>How do I start?</strong> Book a call. I look at your current setup and lead flow, then give you a clear plan and quote.</p>
+      </article>
     </div>
     <div class="svc">
       <div class="svc-glow"></div>
@@ -1181,6 +1219,33 @@ footer{background:var(--bg);padding:32px 64px;display:flex;align-items:center;ju
       <div class="svc-ico-wrap">🔗</div>
       <h3>Make.com Automation</h3>
       <p>Custom Make.com scenarios connecting your apps and automating complex multi-step workflowsno code required.</p>
+      <button type="button" class="svc-more" data-svc="svc-d-make" aria-haspopup="dialog">See how it works &rarr;</button>
+      <article class="svc-detail" id="svc-d-make">
+        <h3>Make.com Automation</h3>
+        <h4>The problem</h4>
+        <p>Your team copies the same data between apps every day: form to CRM, CRM to spreadsheet, invoice to accounting, new client to project tool. It is slow, it causes mistakes, and it stops the moment someone is sick or busy.</p>
+        <h4>Who it is for</h4>
+        <p>Small and growing businesses that use several apps (forms, CRM, Google Sheets, email, Slack, accounting, project tools) and want them to talk to each other without hiring a developer.</p>
+        <h4>What I build</h4>
+        <p>Custom Make.com scenarios that move data between your apps, make decisions along the way (filters, routers, conditions), and handle errors so nothing silently breaks. Typical builds: lead routing, client onboarding, invoice and payment flows, report generation, and syncing your CRM with Google Sheets.</p>
+        <h4>How it works</h4>
+        <ol>
+          <li>We map the steps your team does by hand today and where the data comes from.</li>
+          <li>I build the scenario in Make.com: trigger, the steps in between, and the logic for each case.</li>
+          <li>I test it with real examples, add error alerts, and document what it does.</li>
+          <li>It runs on its own, around the clock, and you get notified only when something needs a person.</li>
+        </ol>
+        <h4>What changes for your business</h4>
+        <p>Hours of copy-paste work disappear, data is the same in every app, and processes keep running even when your team is busy.</p>
+        <h4>Tools</h4>
+        <p>Make.com, connected to the apps you already use, such as GoHighLevel, Google Sheets, Gmail, Slack, Calendly and Stripe.</p>
+        <h4>Sample project</h4>
+        <p>High-Ticket Lead Routing and Sales Team Round-Robin: an automated workflow that routes high-ticket leads and assigns them to the sales team on a round-robin basis, so every rep gets a fair share and no lead waits. You can view it in the Portfolio section of this page.</p>
+        <h4>FAQ</h4>
+        <p><strong>What is Make.com used for?</strong> Make.com connects your apps and automates multi-step processes, so data moves and actions happen without anyone doing it by hand.</p>
+        <p><strong>Make.com or Zapier?</strong> Make.com is better for complex flows with many branches and lower cost at high volume. Zapier is quicker for simple two or three step automations. I recommend the one that fits your process.</p>
+        <p><strong>What if a step fails?</strong> I add error handling and alerts, so you know right away and nothing is lost.</p>
+      </article>
     </div>
     <div class="svc">
       <div class="svc-glow"></div>
@@ -1188,6 +1253,31 @@ footer{background:var(--bg);padding:32px 64px;display:flex;align-items:center;ju
       <div class="svc-ico-wrap">🔄</div>
       <h3>Zapier Workflows</h3>
       <p>Zapier automations that connect 5,000+ apps, trigger actions instantly, and keep your business running on autopilot.</p>
+      <button type="button" class="svc-more" data-svc="svc-d-zapier" aria-haspopup="dialog">See how it works &rarr;</button>
+      <article class="svc-detail" id="svc-d-zapier">
+        <h3>Zapier Workflows</h3>
+        <h4>The problem</h4>
+        <p>Small repetitive tasks eat your day: adding new leads to the CRM, sending the welcome email, posting a message to the team, saving form answers to a sheet. Each one takes a minute, but together they take hours, and some get missed.</p>
+        <h4>Who it is for</h4>
+        <p>Business owners and teams who already use popular apps and want quick, reliable automations without changing their tools.</p>
+        <h4>What I build</h4>
+        <p>Zapier workflows (Zaps) that trigger the moment something happens in one app and take action in others: new lead to CRM and welcome email, booked call to calendar reminder and team notification, form submission to Google Sheets and Slack, payment to receipt and onboarding.</p>
+        <h4>How it works</h4>
+        <ol>
+          <li>We list the tasks you repeat most and which apps they involve.</li>
+          <li>I build each Zap with the right trigger, filters and formatting, so only the right data moves.</li>
+          <li>I test every path and set up error notifications.</li>
+          <li>The tasks run instantly on their own, every time.</li>
+        </ol>
+        <h4>What changes for your business</h4>
+        <p>Faster responses to leads and clients, fewer missed steps, and time back for the work that actually grows the business.</p>
+        <h4>Tools</h4>
+        <p>Zapier, with the 5,000+ apps it connects, including GoHighLevel, Gmail, Google Sheets, Slack, Calendly and Stripe.</p>
+        <h4>FAQ</h4>
+        <p><strong>What can Zapier automate?</strong> Almost any task where something happens in one app and should cause an action in another, such as saving leads, sending emails, posting notifications or updating records.</p>
+        <p><strong>Can you fix or improve my existing Zaps?</strong> Yes. I can audit the Zaps you have, fix the ones that break, and combine or simplify them.</p>
+        <p><strong>Is Zapier enough for my business?</strong> For simple, high-value automations, yes. For complex flows with a lot of logic, I may suggest Make.com or n8n instead.</p>
+      </article>
     </div>
     <div class="svc">
       <div class="svc-glow"></div>
@@ -1195,6 +1285,33 @@ footer{background:var(--bg);padding:32px 64px;display:flex;align-items:center;ju
       <div class="svc-ico-wrap">📞</div>
       <h3>AI Phone Assistant</h3>
       <p>24/7 AI voice agents that answer inbound calls, qualify leads, book appointments, and handle FAQs automatically.</p>
+      <button type="button" class="svc-more" data-svc="svc-d-voice" aria-haspopup="dialog">See how it works &rarr;</button>
+      <article class="svc-detail" id="svc-d-voice">
+        <h3>AI Phone Assistant (AI Voice Agent)</h3>
+        <h4>The problem</h4>
+        <p>Calls come in after hours, on weekends, or while you are on a job, and they go to voicemail. Most callers do not leave a message. They call the next business on the list, and that lead is gone.</p>
+        <h4>Who it is for</h4>
+        <p>Businesses that live on phone calls: home services like HVAC, roofing and plumbing, med spas and clinics, real estate, contractors and any team that cannot answer every call live.</p>
+        <h4>What I build</h4>
+        <p>A 24/7 AI voice agent with a natural voice that answers your calls, asks the right qualifying questions, answers common questions from your own information, books the appointment on your calendar, and sends the details to your CRM. It can also make outbound calls, for example to follow up on new leads.</p>
+        <h4>How it works</h4>
+        <ol>
+          <li>A customer calls your number. The AI agent picks up instantly, any time of day.</li>
+          <li>It answers their questions and asks your qualifying questions, like service needed, location and timing.</li>
+          <li>It books the appointment or takes a message, and escalates urgent calls to a person.</li>
+          <li>The call summary, answers and recording go to your CRM or Google Sheet, and you get notified.</li>
+        </ol>
+        <h4>What changes for your business</h4>
+        <p>No more missed calls, every caller gets a fast and friendly answer, and qualified appointments land on your calendar while you work.</p>
+        <h4>Tools</h4>
+        <p>ElevenLabs and Vapi for the voice agent, Twilio for phone numbers, Claude for the conversation logic, and n8n, Make.com or GoHighLevel to connect it to your CRM and calendar.</p>
+        <h4>Sample project</h4>
+        <p>The AI version of me on this website: you can call or chat with it and it answers questions about my services and takes your details. You can also watch how I built an AI voice assistant, coding the voice agent with Claude and wiring the lead automation in n8n, in the <a href="#ai-build">How I Built This With AI</a> section.</p>
+        <h4>FAQ</h4>
+        <p><strong>Will callers know it is AI?</strong> The voice sounds natural, and the agent can introduce itself as your virtual assistant. Being clear builds trust.</p>
+        <p><strong>Can it book appointments?</strong> Yes. It checks your calendar, offers open times and books the slot the caller picks.</p>
+        <p><strong>What if the caller asks something it does not know?</strong> It does not guess. It takes a message or hands the call to your team.</p>
+      </article>
     </div>
     <div class="svc">
       <div class="svc-glow"></div>
@@ -1202,6 +1319,33 @@ footer{background:var(--bg);padding:32px 64px;display:flex;align-items:center;ju
       <div class="svc-ico-wrap">🤖</div>
       <h3>AI Integration</h3>
       <p>Voice AI agents, chatbots, and digital twins built using Claude AI, Vapi, and ElevenLabs, embedded into your business.</p>
+      <button type="button" class="svc-more" data-svc="svc-d-ai" aria-haspopup="dialog">See how it works &rarr;</button>
+      <article class="svc-detail" id="svc-d-ai">
+        <h3>AI Integration</h3>
+        <h4>The problem</h4>
+        <p>Leads ask the same questions again and again, and they expect an answer in minutes, not the next day. Your team cannot reply that fast all day and night, so leads go cold before anyone talks to them.</p>
+        <h4>Who it is for</h4>
+        <p>Businesses that get many inquiries by email, chat or website and want fast, accurate replies without adding staff.</p>
+        <h4>What I build</h4>
+        <p>AI assistants trained on your own business information that reply to leads, ask your qualification questions, save the answers to your CRM, book appointments, and hand the conversation to a person when it should. Options include AI chatbots for your website, AI email assistants, voice agents and an AI digital twin of you.</p>
+        <h4>How it works</h4>
+        <ol>
+          <li>I write the AI's instructions and knowledge from your services, pricing policy, FAQs and tone of voice.</li>
+          <li>I connect it to your tools so it can save answers, move the lead in your pipeline and check your calendar.</li>
+          <li>When a lead writes in, the AI answers, qualifies and books, following clear safety rules.</li>
+          <li>Anything sensitive, urgent or unknown is escalated to your team with a summary.</li>
+        </ol>
+        <h4>What changes for your business</h4>
+        <p>Every lead gets a fast, consistent and helpful answer at any hour, and your team only steps in for the conversations that need them.</p>
+        <h4>Tools</h4>
+        <p>Claude AI, Vapi and ElevenLabs, connected through n8n, Make.com or GoHighLevel.</p>
+        <h4>Sample project</h4>
+        <p>The live AI sales system demos on this page for <a href="https://construction.joyirinebarnayha.com/" target="_blank" rel="noopener">Construction</a>, <a href="https://medspa-demo-one.vercel.app/" target="_blank" rel="noopener">Med Spa</a> and <a href="https://hvac-demo-site-phi.vercel.app/" target="_blank" rel="noopener">HVAC</a>. These are demos I built, not client projects. In each one, an AI assistant replies to your inquiry by email, asks qualifying questions and books the appointment.</p>
+        <h4>FAQ</h4>
+        <p><strong>Will the AI make things up?</strong> It answers only from the information I give it, and it is set up to escalate instead of guessing.</p>
+        <p><strong>Can it work with my CRM?</strong> Yes. It can save answers, add tags, move pipeline stages and book appointments in tools like GoHighLevel.</p>
+        <p><strong>Which AI do you use?</strong> Mainly Claude for conversations, with ElevenLabs or Vapi for voice. I choose based on what the task needs.</p>
+      </article>
     </div>
     <div class="svc">
       <div class="svc-glow"></div>
@@ -1209,6 +1353,33 @@ footer{background:var(--bg);padding:32px 64px;display:flex;align-items:center;ju
       <div class="svc-ico-wrap">🌐</div>
       <h3>Landing Pages & Funnels</h3>
       <p>High-converting landing pages and sales funnels in GHL or custom HTMLbuilt with a clear strategy to convert visitors into clients.</p>
+      <button type="button" class="svc-more" data-svc="svc-d-pages" aria-haspopup="dialog">See how it works &rarr;</button>
+      <article class="svc-detail" id="svc-d-pages">
+        <h3>Landing Pages &amp; Funnels</h3>
+        <h4>The problem</h4>
+        <p>People visit your page and leave without doing anything. The message is unclear, there is no single next step, and the leads that do come in are not connected to any follow-up.</p>
+        <h4>Who it is for</h4>
+        <p>Businesses running ads or outreach that need a page built to turn visitors into booked calls, and anyone who needs a fast, professional website without a long agency project.</p>
+        <h4>What I build</h4>
+        <p>Landing pages, sales funnels and custom websites with one clear goal per page, a strong headline, proof, and an easy next step such as a form or booking calendar. Every form connects to your CRM, so each new lead gets an instant reply and follow-up.</p>
+        <h4>How it works</h4>
+        <ol>
+          <li>We agree on the goal of the page and who it is for.</li>
+          <li>I write the structure and build the page in GoHighLevel or custom HTML, fast on mobile and desktop.</li>
+          <li>I connect the form or calendar to your CRM and automations.</li>
+          <li>The page goes live on your domain, set up for search engines.</li>
+        </ol>
+        <h4>What changes for your business</h4>
+        <p>More of your visitors take action, and every lead from the page is captured and followed up automatically.</p>
+        <h4>Tools</h4>
+        <p>GoHighLevel funnels and websites, custom HTML hosted on Vercel, connected to your CRM and automations.</p>
+        <h4>Sample project</h4>
+        <p><a href="/helpmefindtherightproperty">Help Me Find the Right Property</a>, a real estate landing page, plus the website builds in the <a href="#samples">Website Builds</a> section of this page.</p>
+        <h4>FAQ</h4>
+        <p><strong>GoHighLevel or custom HTML?</strong> GHL is best if you want to edit the page yourself and keep everything in one CRM. Custom HTML is best for speed and full design freedom.</p>
+        <p><strong>Can you connect it to my CRM?</strong> Yes. Every form and booking is connected, so leads get an instant reply and follow-up.</p>
+        <p><strong>Will it work on mobile?</strong> Yes. Every page is built and tested for phones first.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -2150,6 +2321,25 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     setTimeout(function(){ started = true; send(); }, 15000);
     document.addEventListener('visibilitychange', function(){ if (document.visibilityState === 'hidden' && started) send(); });
   } catch (e) {}
+})();
+</script>
+<div class="svc-modal" id="svcModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="svc-modal-box"><button type="button" class="svc-modal-x" aria-label="Close">&times;</button><div class="svc-modal-body"></div></div>
+</div>
+<script>
+(function(){
+  var m=document.getElementById('svcModal');if(!m)return;
+  var body=m.querySelector('.svc-modal-body');
+  function close(){m.classList.remove('open');m.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+  document.querySelectorAll('.svc-more').forEach(function(b){
+    b.addEventListener('click',function(){
+      var d=document.getElementById(b.getAttribute('data-svc'));if(!d)return;
+      body.innerHTML=d.innerHTML;m.querySelector('.svc-modal-box').scrollTop=0;
+      m.classList.add('open');m.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+    });
+  });
+  m.addEventListener('click',function(e){if(e.target===m||e.target.classList.contains('svc-modal-x'))close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
 })();
 </script>
 </body>

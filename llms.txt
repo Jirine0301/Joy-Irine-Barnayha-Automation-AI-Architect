@@ -13,6 +13,22 @@ Joy helps businesses eliminate manual work through smart systems, AI agents, and
 - AI Integration: voice AI agents, chatbots, and digital twins built with Claude AI, Vapi, and ElevenLabs
 - Landing Pages & Funnels: high-converting landing pages and sales funnels in GHL or custom HTML
 
+## Problems Joy solves
+
+- Leads waiting hours for a reply or going cold: speed-to-lead systems that reply within minutes and follow up automatically until the lead books (GoHighLevel, n8n, Make.com).
+- Missed calls after hours and on weekends: 24/7 AI phone assistants that answer, qualify, book appointments and log every call to the CRM (ElevenLabs, Vapi, Twilio, Claude).
+- Leads scattered across forms, calls, Facebook and email: one GoHighLevel pipeline where every inquiry is captured and moved from new lead to paid.
+- Copy-paste admin between apps: Make.com and Zapier automations that move data between CRM, Google Sheets, email, Slack, calendars and payments, with error alerts.
+- The same questions asked again and again: AI assistants trained on the business's own information that reply, qualify and book, and escalate to a person when needed.
+- Website visitors who leave without acting: landing pages and funnels with one clear next step, connected to the CRM for instant follow-up.
+
+## Live demos (built by Joy, not client projects)
+
+- [AI Sales System for Construction](https://construction.joyirinebarnayha.com/): answers every inquiry, books site visits, sends proposals, contracts and deposit invoices
+- [AI Sales System for Med Spa](https://medspa-demo-one.vercel.app/): replies to inquiries, qualifies and books consultations, treatment plan and deposit flow
+- [AI Sales System for HVAC](https://hvac-demo-site-phi.vercel.app/): replies to service requests, books visits, sends quotes and deposit invoices
+- AI version of Joy on the homepage: call or chat with it about her services
+
 ## Tools
 
 GoHighLevel, Make.com, Zapier, n8n, Claude AI, Vapi.ai, ElevenLabs, ChatGPT, Zoho CRM, Airtable, Notion, Google Workspace, HTML/CSS, CapCut, HeyGen, Canva
