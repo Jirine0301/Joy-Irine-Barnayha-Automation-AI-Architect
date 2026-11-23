@@ -1925,9 +1925,7 @@ function smmBuildCards(){
   if(!stack) return;
   stack.innerHTML = SMM_NICHES.map((n,i) => n.cover ? `<div class="smm-card smm-card-cover" onclick="smmClickCard(this)" data-niche="${i}">
     <div style="position:absolute;inset:0;background:url('${n.cover}') center/cover no-repeat;"></div>
-    <div style="position:absolute;bottom:14px;left:0;right:0;text-align:center;">
-      <span style="font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,0.72);padding:7px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.2);">Tap to explore ↓</span>
-    </div>
+    <div style="position:absolute;bottom:18px;left:20px;font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:${n.accent};font-family:'Montserrat',sans-serif;">Tap to explore ↓</div>
   </div>` : `<div class="smm-card" onclick="smmClickCard(this)" data-niche="${i}">
     <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/${n.photo}?w=600&q=80') center/cover;"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.05) 42%,rgba(0,0,0,0.96) 100%);"></div>
